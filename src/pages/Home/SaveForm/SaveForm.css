@@ -1,0 +1,33 @@
+.Box-Forms{
+    margin: 0 0;
+    margin-right: -15px;
+    padding: 50px;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 600px;
+    background: var(--card-bg);
+}
+
+.Box-Forms div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.Box-Forms button{
+    margin-top: 20px;
+}
+
+.Box-Forms input{
+    border-radius: 10px;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.Box-Forms textarea{
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 20px;
+}
