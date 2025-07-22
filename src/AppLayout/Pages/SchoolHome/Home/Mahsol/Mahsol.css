@@ -1,0 +1,77 @@
+.product-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.save-button-container {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .save-button-container {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.save-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color) !important;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.save-button svg {
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.save-button:hover {
+    transform: scale(1.1) rotate(360deg);
+    background: var(--primary-color) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.save-button:hover svg {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.save-button.saved {
+    background: #28a745 !important;
+    transform: scale(1.1);
+}
+
+.save-button.saved:hover {
+    background: #218838 !important;
+}
+
+/* Dark mode styles */
+.dark-mode .save-button {
+    background: var(--primary-color) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .save-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .save-button.saved {
+    background: #28a745 !important;
+} 

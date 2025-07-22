@@ -1,0 +1,115 @@
+.MahsoleBox1 {
+    margin: 50px 0;
+    padding: 50px;
+    max-height: 500px;
+    overflow: auto;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--hover-bg) 100%);
+    box-shadow: 0 8px 32px var(--shadow-color);
+    position: relative;
+    margin-top: 40px;
+}
+
+.MahsoleBox1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, var(--primary-color) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, var(--primary-color) 0%, transparent 50%);
+    opacity: 0.1;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.MahsoleBox1 > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Card Grid Layout */
+.card-grid {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    background: transparent !important;
+}
+
+.container {
+    background: transparent !important;
+}
+
+/* Responsive Grid Layout */
+@media (min-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card Styles */
+.card {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: transparent !important;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: transparent !important;
+}
+
+.card-text {
+    flex: 1;
+}
+
+/* Dark mode specific styles */
+.dark-mode .MahsoleBox1 {
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--card-bg) 100%);
+}
+
+.dark-mode .MahsoleBox1::before {
+    opacity: 0.05;
+}
+
+.dark-mode .card {
+    border-color: var(--border-color);
+    background: transparent !important;
+}
+
+.dark-mode .card:hover {
+    border-color: var(--primary-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .MahsoleBox1 {
+        margin: 20px 0;
+        padding: 20px;
+    }
+}
